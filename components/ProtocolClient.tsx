@@ -162,7 +162,7 @@ export const ProtocolClient = ({ initialTasks }: ProtocolClientProps) => {
             <ArrowLeft size={18} />
             Back to Execution
           </Link>
-          <div className="font-black tracking-tighter text-xl uppercase">Protocol.</div>
+          <div className="font-black tracking-tighter text-xl uppercase mr-7 sm:mr-0">Protocol.</div>
         </div>
       </nav>
 
@@ -300,25 +300,6 @@ export const ProtocolClient = ({ initialTasks }: ProtocolClientProps) => {
 
               </div>
             ))}
-
-            {/* {(activeTab === 'active' ? activeTasks : archivedTasks).map((task) => (
-              <div key={task.id} className="flex items-start justify-between p-4 border border-zinc-200 dark:border-zinc-800 rounded group hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors">
-                <div>
-                  <h3 className={`font-medium text-lg ${task.is_active === false ? 'text-zinc-500' : ''}`}>{task.title}</h3>
-                  <div className="flex gap-4 mt-1">
-                    {task.why_text && <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400">Has Why</span>}
-                    {task.goal_text && <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400">Has Goal</span>}
-                  </div>
-                </div>
-                <button
-                  onClick={() => handleToggleArchive(task.id, task.is_active ?? true)}
-                  className="p-2 text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
-                  title={task.is_active !== false ? "Archive Task" : "Restore Task"}
-                >
-                  {task.is_active !== false ? <Archive size={18} /> : <RefreshCw size={18} />}
-                </button>
-              </div>
-            ))} */}
 
             {(activeTab === 'active' && activeTasks.length === 0) && (
               <p className="text-zinc-500 italic">Your active protocol is empty.</p>

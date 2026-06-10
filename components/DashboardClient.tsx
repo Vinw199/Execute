@@ -68,32 +68,30 @@ export const DashboardClient = ({ initialTasks, initialCompletedIds }: Dashboard
   };
 
   return (
-    <div>
-      <nav className="sticky top-0 z-10 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800">
+    <div className="min-h-screen bg-stone-50 text-stone-800 font-sans">
+
+      {/* <nav className="sticky top-0 z-10 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800">
         <div className="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="font-black tracking-tighter text-xl uppercase">Execution.</div>
+        </div>
+      </nav> */}
+
+      <nav className="h-16 flex items-center justify-center border-b border-stone-200/50">
+        <div className="font-medium tracking-wide text-sm text-stone-400 uppercase">
+          Execution
         </div>
       </nav>
 
       <main className="max-w-3xl mx-auto px-6 py-12">
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-          {/* <header className="mb-12">
-            <h1 className="text-5xl font-black tracking-tighter uppercase mb-2">The Checklist</h1>
-            <p className="text-lg text-zinc-500 font-medium">{todayDisplay}</p>
-          </header> */}
 
-          <header className="mb-10 pb-4 border-b border-zinc-200 dark:border-zinc-800">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-              <h1 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
-                {todayDisplay}
-              </h1>
-              <span className="font-mono text-xs uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
-                System // Active
-              </span>
-            </div>
+          <header className="mb-10 text-center">
+            <h1 className="text-xs tracking-widest text-stone-400 uppercase">
+              {todayDisplay}
+            </h1>
           </header>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-6">
             {initialTasks.length > 0 ? (
               initialTasks.map((task: Task) => (
                 <TaskItem
@@ -104,7 +102,7 @@ export const DashboardClient = ({ initialTasks, initialCompletedIds }: Dashboard
                 />
               ))
             ) : (
-              <p className="text-zinc-500 font-medium italic mt-8">
+              <p className="text-stone-400 font-medium italic mt-8">
                 No active tasks found.
               </p>
             )}

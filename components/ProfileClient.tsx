@@ -81,7 +81,7 @@ export const ProfileClient = ({ email, createdAt, initialName, initialDirective 
             <ArrowLeft size={18} />
             Back to Execution
           </Link>
-          <div className="font-black tracking-tighter text-xl uppercase">Operator.</div>
+          <div className="font-black tracking-tighter text-xl uppercase mr-7 sm:mr-0">Operator.</div>
         </div>
       </nav>
 

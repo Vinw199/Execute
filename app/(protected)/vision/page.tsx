@@ -27,7 +27,7 @@ export default async function VisionPage() {
             <ArrowLeft size={18} />
             Back to Execution
           </Link>
-          <div className="font-black tracking-tighter text-xl uppercase">Vision.</div>
+          <div className="font-black tracking-tighter text-xl uppercase mr-7 sm:mr-0">Vision.</div>
         </div>
       </nav>
 
