@@ -1,8 +1,13 @@
+import { Metadata } from 'next'
 import { redirect } from 'next/navigation'
-// import { LogoutButton } from '@/components/logout-button'
 import { createClient } from '@/lib/server'
 import { DashboardClient } from '@/components/DashboardClient'
 import { Task } from '@/types'
+
+export const metadata: Metadata = {
+  title: 'Execute',
+  description: 'Minimalist execution dashboard.',
+};
 
 export default async function App() {
   const supabase = await createClient()
@@ -36,7 +41,6 @@ export default async function App() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans transition-colors duration-200">
-      {/* <LogoutButton /> */}
       <DashboardClient
         initialTasks={tasks}
         initialCompletedIds={completedTaskIds}

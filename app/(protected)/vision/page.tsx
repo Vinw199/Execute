@@ -1,7 +1,12 @@
+import { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/server'
 import Link from 'next/link'
 import { ArrowLeft, Target, BookOpen } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Vision',
+};
 
 export default async function VisionPage() {
   const supabase = await createClient()

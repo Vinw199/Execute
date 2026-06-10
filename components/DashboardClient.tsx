@@ -77,9 +77,20 @@ export const DashboardClient = ({ initialTasks, initialCompletedIds }: Dashboard
 
       <main className="max-w-3xl mx-auto px-6 py-12">
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-          <header className="mb-12">
+          {/* <header className="mb-12">
             <h1 className="text-5xl font-black tracking-tighter uppercase mb-2">The Checklist</h1>
             <p className="text-lg text-zinc-500 font-medium">{todayDisplay}</p>
+          </header> */}
+
+          <header className="mb-10 pb-4 border-b border-zinc-200 dark:border-zinc-800">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <h1 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
+                {todayDisplay}
+              </h1>
+              <span className="font-mono text-xs uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
+                System // Active
+              </span>
+            </div>
           </header>
 
           <div className="flex flex-col gap-2">

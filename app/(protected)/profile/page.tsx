@@ -1,7 +1,12 @@
+import { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/server'
 import { ProfileClient } from '@/components/ProfileClient'
 import { LogOut } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Operator',
+};
 
 export default async function ProfilePage() {
   const supabase = await createClient()

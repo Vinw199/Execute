@@ -1,7 +1,12 @@
+import { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/server'
 import { ProtocolClient } from '@/components/ProtocolClient'
 import { Task } from '@/types'
+
+export const metadata: Metadata = {
+  title: 'System',
+};
 
 export default async function ProtocolPage() {
   const supabase = await createClient()
